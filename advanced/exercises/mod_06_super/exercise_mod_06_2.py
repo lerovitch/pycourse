@@ -45,5 +45,9 @@ class AttrDict:
         >>> attrdict['item']
         6
     '''
-    pass
+    def __getattr__(self, key):
+
+
+    def __setattribute__(self, key, value):
+        self.key = value
 

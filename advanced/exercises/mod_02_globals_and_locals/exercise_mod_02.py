@@ -76,5 +76,6 @@ def get_key(key):
 def clear_keys():
     """Remove all cache keys content
     """
-    # Tip: check global keyword: http://docs.python.org/2/reference/simple_stmts.html#global
+    #CACHE = OrderedDict()
+    CACHE.clear()
     raise NotImplementedError

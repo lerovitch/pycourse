@@ -69,7 +69,7 @@ class Attr(object):
             super(Attr, self).__setattr__(name, value)
 
 
-class Verbose():
+class Verbose(object):
     '''Print all attributes and keys accesses for query or modification
     '''
     def __getattribute__(self, name):
@@ -107,7 +107,7 @@ class DateStr(object):
         return super(DateStr, self).__setattr__(name, value)
 
 
-class AmazingDict(DateStr, Lower, dict):
+class AmazingDict(Attr, Lower, DateStr, Verbose, dict):
     '''Dictionary with amazing enhanced behaviour:
     - Access keys as attributes only if they already exist
     - Lower attributes and key names for query or modification
